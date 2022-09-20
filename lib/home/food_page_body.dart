@@ -43,7 +43,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           itemCount: 5,
           itemBuilder: (context, position){
             return _buildPageItem(position);
-          }),), DotsIndicator(dotsCount: 5,position: _currPageValue, decorator: DotsDecorator (activeColor: AppColors.mainColor,size: const Size.square((9.0)), activeSize: const Size(18.0,9.0), activeShape: const RoundedRectangleBorder(borderRadius: BorderRadius.horizontal(left: Radius.circular(10), right: Radius.circular(10)))),)
+          }),), DotsIndicator(dotsCount: 5,position: _currPageValue, decorator: DotsDecorator (activeColor: AppColors.mainColor,size: const Size.square((9.0)), activeSize: const Size(18.0,9.0), activeShape:  RoundedRectangleBorder(borderRadius: BorderRadius.horizontal(left: Radius.circular(Dimensions.radius10), right: Radius.circular(Dimensions.radius10)))),)
     ],) ;
   }
   Widget _buildPageItem(int index){
@@ -71,24 +71,24 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return Transform(transform: matrix, child:   Stack(children: [
       Container(height: Dimensions.pageViewContainer, margin: const EdgeInsets.all(5),decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.radius30),color: const Color(0xFF89DAD0),image: const DecorationImage(image: AssetImage("assets/images/food_1.jpg"), fit: BoxFit.fitWidth)),),
       Align(alignment: Alignment.bottomCenter,
-        child: Container(height: Dimensions.pageViewTextContainer,margin: const EdgeInsets.only(right: 30, left: 30, bottom: 15),decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: const Color(0xFFFFFFFF),boxShadow: const [BoxShadow(color: Color(0xFFE8E8E8), blurRadius: 5.0, offset: Offset(0,5),), BoxShadow(color: Colors.white, blurRadius: 0, offset: Offset(5,0),), BoxShadow(color: Colors.white, blurRadius: 0, offset: Offset(-5,0),)]),
+        child: Container(height: Dimensions.pageViewTextContainer,margin: const EdgeInsets.only(right: 30, left: 30, bottom: 15),decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.radius30),color: const Color(0xFFFFFFFF),boxShadow: const [BoxShadow(color: Color(0xFFE8E8E8), blurRadius: 5.0, offset: Offset(0,5),), BoxShadow(color: Colors.white, blurRadius: 0, offset: Offset(5,0),), BoxShadow(color: Colors.white, blurRadius: 0, offset: Offset(-5,0),)]),
           child: Container(padding: const EdgeInsets.all(15.0),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center,children: [
               BigText(text: "Desert",),
               SizedBox(height: Dimensions.height20),
               Row(children: [
                 Wrap(children: List.generate(5, (index) => Icon(Icons.star, color: AppColors.mainColor,size: 15,)),),
-                const SizedBox(width: 5,),
+                SizedBox(width: Dimensions.width5,),
                 SmallText(text: "4.5"),
-                const SizedBox(width: 10,),
+                SizedBox(width: Dimensions.width10,),
                 SmallText(text: "1278"),
-                const SizedBox(width: 5,),
+                SizedBox(width: Dimensions.width5,),
                 SmallText(text: "comments")
               ],),
-              Row( children: const [IconAndText(iconData: Icons.circle_sharp, text: "Normal", color: Colors.orangeAccent,),
-                SizedBox(width: 15,),
+              Row( children:  [const IconAndText(iconData: Icons.circle_sharp, text: "Normal", color: Colors.orangeAccent,),
+                SizedBox(width: Dimensions.width15,),
                 IconAndText(iconData: Icons.location_on, text: "1.7 km", color: Colors.blue,),
-                SizedBox(width: 15,),
+                SizedBox(width: Dimensions.width15,),
                 IconAndText(iconData: Icons.lock_clock, text: "32 min", color: Colors.lightGreenAccent,),
               ],),
 
