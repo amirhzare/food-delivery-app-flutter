@@ -36,7 +36,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
         color: AppColors.mainColor,),
         child: const Center(child: Icon(Icons.search, color: Colors.white,),),)
         ],),),
-      const FoodPageBody()
+      const Expanded(child: SingleChildScrollView(child: FoodPageBody(),) )
     ],));
   }
 }
