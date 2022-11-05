@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/pages/food/food_detail.dart';
 import 'package:food_delivery/pages/home/main_food_page.dart';
 import 'package:get/get.dart';
-
+import 'package:food_delivery/utils/dimensions.dart';
 void main() {
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +29,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MainFoodPage(),
+      // home: const MainFoodPage(),
+      home: const FoodDetail(),
     );
   }
 }
