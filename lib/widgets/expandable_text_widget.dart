@@ -41,12 +41,14 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
           Text(hiddenText?('$firstHalf...'):('$firstHalf $secondHalf')),
           InkWell(
             onTap: (){
-
+                setState(() {
+                  hiddenText=!hiddenText;
+                });
             },
             child: Row(
               children: [
                     SmallText(text: 'Show more ', color: Colors.teal,),
-                    const Icon(Icons.expand_more),
+                    Icon(hiddenText?Icons.expand_more:Icons.expand_less, color: Colors.teal,),
               ],
             ),
           )

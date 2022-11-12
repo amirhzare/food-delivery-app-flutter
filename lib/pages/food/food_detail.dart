@@ -28,8 +28,8 @@ class FoodDetail extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: const [
-              AppIcon(iconData: CupertinoIcons.back),
-              AppIcon(iconData: CupertinoIcons.shopping_cart)
+              AppIcon(iconData: CupertinoIcons.back, iconColor: Colors.grey,),
+              AppIcon(iconData: CupertinoIcons.shopping_cart, iconColor: Colors.grey,)
             ],
           )),
           Positioned(left: 0, right: 0, bottom: 0,top: Dimensions.foodDetailImgSize-30,
@@ -43,8 +43,11 @@ class FoodDetail extends StatelessWidget {
                     SizedBox(height: Dimensions.height10,),
                     BigText(text: "Introduce"),
                     SizedBox(height: Dimensions.height10,),
-                    ExpandableTextWidget(text: 'pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot')
-            ]
+                    Expanded(child: SingleChildScrollView(
+                      child: ExpandableTextWidget(text: 'pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot')
+
+
+                      ,))    ]
               ,)
 
 

@@ -11,7 +11,7 @@ class SmallText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,overflow: overFlow,maxLines: 1,style: TextStyle(color: color, fontFamily: 'Roboto', fontWeight: FontWeight.w400, height: height),);
+    return Text(text,overflow: overFlow,style: TextStyle(color: color, fontFamily: 'Roboto', fontWeight: FontWeight.w400, height: height),);
   }
 }
 
