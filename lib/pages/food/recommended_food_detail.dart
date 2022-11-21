@@ -58,6 +58,42 @@ class RecommendedFoodDetail extends StatelessWidget {
         ]
 
       ),
+      bottomNavigationBar:Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: Dimensions.width20*2.5, right: Dimensions.width20*2.5, top: Dimensions.height10, bottom: Dimensions.height10),
+            child:  Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AppIcon(iconData: Icons.remove, iconColor: AppColors.white, color: AppColors.mainColor),
+                BigText(text: "12.88 ${'X'} ${'0'}", color: AppColors.mainBlackColor,),
+                AppIcon(iconData: Icons.add, iconColor: AppColors.white, color: AppColors.mainColor,)
+              ],),
+          ),
+          Container(height: Dimensions.bottomHeightBar,
+            padding: EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.width20, right: Dimensions.width20),
+            decoration: BoxDecoration(color: AppColors.lightGray, borderRadius: BorderRadius.all(Radius.circular(Dimensions.radius20*2))),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.radius20), color: Colors.white),
+                  padding:  EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.width20, right: Dimensions.width20, left: Dimensions.width20),
+                  margin: EdgeInsets.only(left: Dimensions.width10),
+                  child: Row(
+                    children: [
+                      Icon(Icons.favorite, color: AppColors.mainColor,),
+                    ],
+                  ),),
+                Container(decoration: BoxDecoration(color: AppColors.mainColor, borderRadius: BorderRadius.all(Radius.circular(Dimensions.width20))),
+                  padding: EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.width20, right: Dimensions.width20, left: Dimensions.width20),
+                  child: BigText(text: "\$10 | Add to cart", color: Colors.white,),
+                )
+
+              ],
+            ),
+          ),
+      ],),
     );
   }
 }

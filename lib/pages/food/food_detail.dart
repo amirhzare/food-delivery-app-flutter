@@ -57,7 +57,8 @@ class FoodDetail extends StatelessWidget {
 
     )],
       ),
-      bottomNavigationBar: Container(height: Dimensions.bottomHeightBar,
+      bottomNavigationBar:
+      Container(height: Dimensions.bottomHeightBar,
           padding: EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.width20, right: Dimensions.width20),
           decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.all(Radius.circular(Dimensions.radius20*2))),
           child: Row(

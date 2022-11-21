@@ -12,6 +12,6 @@ class AppIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(alignment: Alignment.center,width: size, height: size,
-      decoration: BoxDecoration(color: color,borderRadius: BorderRadius.circular(size)),child: Icon(iconData,color: this.iconColor,),);
+      decoration: BoxDecoration(color: color,borderRadius: BorderRadius.circular(size),),child: Icon(iconData,color: iconColor,size: iconSize,),);
   }
 }
